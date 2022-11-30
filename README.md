@@ -141,3 +141,14 @@ Thanks also to the members of the SMPTE DC28.20 packaging ad-hoc group
 and the members of the MXF Interop Initiative for their encouragement
 and support. Special thanks to Jim Whittlesey and Howard Lukk at DCI
 for proposing and supporting this project. 
+
+## Docker usage info
+
+### build docker
+`docker build --rm -f Dockerfile -t asdcplib:latest .`
+
+### run docker in isolated container
+`docker run -it --rm asdcplib:latest`
+
+### run docker image (mapping C:\temp on Windows host to /tmp in container)
+`docker run -it --rm -v C:\\temp:/tmp/ asdcplib:latest`
